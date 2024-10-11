@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             uscSource = new FolderControl();
             uscLink = new FolderControl();
             btnGo = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             bgwWorker = new System.ComponentModel.BackgroundWorker();
             statusStrip1 = new StatusStrip();
-            lblStatus = new ToolStripStatusLabel();
             prbProgress = new ToolStripProgressBar();
+            lblStatus = new ToolStripStatusLabel();
             tableLayoutPanel1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -103,15 +104,15 @@
             statusStrip1.TabIndex = 4;
             statusStrip1.Text = "statusStrip1";
             // 
-            // lblStatus
-            // 
-            lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(0, 17);
-            // 
             // prbProgress
             // 
             prbProgress.Name = "prbProgress";
             prbProgress.Size = new Size(100, 16);
+            // 
+            // lblStatus
+            // 
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(0, 17);
             // 
             // MainForm
             // 
@@ -121,6 +122,7 @@
             Controls.Add(statusStrip1);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             Text = "Linc&Sync";
             tableLayoutPanel1.ResumeLayout(false);
